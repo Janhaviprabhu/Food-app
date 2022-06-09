@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/common.css">
+</head>
+<style>
+#login{
+    padding: 20px;
+    width: 310px;
+    height: 280px;
+    margin: auto;
+    text-align: center;
+    background-color:rgb(235, 235, 235);
+    border-radius: 10px;
+    margin-top: 100px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+input{
+        padding: 5px;
+        font-size: 14px;
+    }
+     button{
+        margin-top: 20px;
+        padding: 8px;
+        background-color:white;
+        border: 1px solid black;
+        border-radius: 3px;
+    }
+</style>
+
+<body>
+    <div id="navbar"></div>
+
+    <div id="login">
+    <p>Username</p>
+    <input id="user" type="text"placeholder="Enter registered username" ><br><br>
+
+    <p>Password</p>
+    <input id="password" type="text" placeholder="Enter registered password"><br><br>
+
+    <button onclick="login()">Login</button>
+
+</div>
+    
+</body>
+</html>
+<script type="module">
+    import navbar from "./components/navbar.js"
+    document.getElementById("navbar").innerHTML=navbar()
+
+
+   
+
+</script>
+<script src="./scripts/login.js"></script>

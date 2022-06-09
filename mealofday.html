@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/meal.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <h3>Recepie of the Day</h3>
+    <div id="container"></div>
+    
+</body>
+</html>
+<script type="module">
+
+    import navbar from "./components/navbar.js"
+
+    document.getElementById("navbar").innerHTML=navbar()
+
+     import {getdata,append} from "./scripts/appendFetch.js"
+
+     let url= "https://www.themealdb.com/api/json/v1/1/random.php";
+
+     let data= await getdata(url);
+
+     let con= document.getElementById("container")
+
+     append(data,con)
+
+    
+
+
+</script>

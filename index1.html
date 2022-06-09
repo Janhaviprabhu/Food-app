@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<style>
+    #food{
+        width: 350px;
+        font-size: 18px;
+        margin-left: 566px;
+        padding: 5px;
+    }
+    h2{
+        text-align: center;
+        margin-top: 100px;
+        
+    }
+    #results{
+        width: 350px;
+        margin: auto;
+        background-color: rgb(235, 235, 235);
+        
+    }
+    #appendresult{
+       
+        width: 500px;
+        padding: 20px;
+        margin: auto;
+        text-align: center;
+         margin-top: 20px;
+         border-radius: 5px;
+        
+    }
+    .img{
+        width: 100%;
+        height: auto;
+      border-radius: 5px;
+        
+    }
+    .box{
+        background-color:rgb(235, 235, 235);
+        padding: 20px;
+        border-radius: 5px;
+    }
+    
+</style>
+<body>
+
+    <div id="navbar">
+        
+    </div>
+
+    <h2>Search your Meal Here..!!</h2>
+    <input  id="food" type="text" placeholder="Enter food name" oninput="debouncing(main,1000)">
+    <div id="results"></div>
+
+    <div id="appendresult"></div>
+ 
+    
+</body>
+</html>
+<script type="module">
+    import navbar from "./components/navbar.js"
+    document.getElementById("navbar").innerHTML=navbar()
+
+    //-- search functionality..//
+
+    
+
+    
+
+
+</script>
+<script src="./scripts/index.js"></script>

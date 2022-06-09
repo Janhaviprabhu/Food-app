@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/common.css">
+</head>
+<style>
+    body{
+        background-image: url("https://images.unsplash.com/photo-1543352634-99a5d50ae78e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    #form{
+       
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        width: 300px;
+        height: 350px;
+        background-color:rgb(235, 235, 235);
+        border-radius: 10px;
+        margin-top: 100px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    }
+    input{
+        padding: 5px;
+        font-size: 14px;
+    }
+    button{
+        margin-top: 10px;
+        padding: 8px;
+        background-color:white;
+        border: 1px solid black;
+        border-radius: 3px;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: black;
+        color: white;
+        width: 70px;
+    }
+</style>
+<body>
+    <div id="navbar"></div>
+
+    <div id="form">
+        <p>Name</p>
+        <input id="name" type="text" placeholder="Enter your name"><br><br>
+        <p>Username</p>
+        <input type="text" name="" id="user" placeholder="Enter username"><br><br>
+        <p>Password</p>
+        <input type="text" name="" id="pw" placeholder="Enter password"><br><br>
+        <button onclick="submit()">Submit</button>
+    </div>
+    
+    
+</body>
+</html>
+<script type="module">
+    import navbar from "./components/navbar.js"
+    document.getElementById("navbar").innerHTML=navbar()
+
+let submit=()=>{
+
+    var dataarr=[];
+
+   function Data(name,user,password){
+       this.name=name;
+       this.user= user;
+       this.password=password
+   }
+    
+
+   let name= document.getElementById("name").value;
+   let user=document.getElementById("user").value;
+   let password=document.getElementById("pw").value;
+
+   let details= new Data(name,user,password)
+
+   dataarr.push(details)
+
+   document.getElementById("name").value=null;
+   document.getElementById("user").value=null;
+   document.getElementById("pw").value=null;
+
+   localStorage.setItem("userdetails",JSON.stringify(dataarr))
+
+   
+}
+
+
+
+
+
+</script>
